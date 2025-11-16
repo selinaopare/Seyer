@@ -1,0 +1,791 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+  <title>Seyer – Selina's Portfolio</title>  
+  <script src="https://cdn.tailwindcss.com"></script>  
+
+  <!-- Google Fonts -->  
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Playfair+Display&family=Dancing+Script:wght@500&display=swap" rel="stylesheet">  
+
+  <!-- Font Awesome CDN -->  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+
+  <meta name="description" content="Selina – Writer & Storyteller. Explore her books, blogs, and creative projects.">  
+
+  <style>
+    .hero-image {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto 1.5rem auto;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    }
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    html { scroll-behavior: smooth; }  
+    body { font-family: 'Lora', serif; }  
+    h1, h2 { font-family: 'Playfair Display', serif; color: #ffffff; text-shadow: 0 0 10px #00ff66, 0 0 20px #00ff66, 0 0 30px #00ff66; }  
+    h3 { font-family: 'Playfair Display', serif; color: #ffffff; }  
+    p, li { color: #ffffff; }  
+
+    .card:hover { transform: translateY(-5px); transition: transform 0.3s ease; }  
+
+    .glass {  
+      backdrop-filter: blur(16px) saturate(180%);  
+      background-color: rgba(16,185,129,0.20);  
+      border-radius: 16px;  
+      border: 1px solid rgba(255,255,255,0.25);  
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);  
+    }  
+
+    nav ul li a { color: #ffffff; text-shadow: 0 0 10px #00ff66, 0 0 20px #00ff66, 0 0 30px #00ff66; }  
+    nav ul li a:hover { text-shadow: 0 0 15px #00ff66, 0 0 25px #00ff66, 0 0 35px #00ff66; }  
+
+    .social-icon {  
+      transition: transform 0.3s ease, text-shadow 0.3s ease, color 0.3s ease;  
+    }  
+    .social-icon:hover {  
+      transform: scale(1.25);  
+      color: #00ff66;  
+      text-shadow: 0 0 8px #00ff66, 0 0 16px #00ff66, 0 0 24px #00ff66;  
+    }  
+
+    @media (max-width: 768px) {  
+      .grid.md\:grid-cols-3 { grid-template-columns: 1fr; }  
+      .px-6 { padding-left: 2rem; padding-right: 2rem; }  
+    }  
+    
+    .about-photo {
+      width: 180px;
+      height: 240px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      margin-top: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .about-photo {
+        margin-top: 0;
+        margin-left: 2rem;
+      }
+    }
+    .about-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .award-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-top-right-radius: 1rem;
+      border-bottom-left-radius: 1rem;
+      border-top-left-radius: 0;
+      border-bottom-right-radius: 0;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+    .card-content {
+  overflow: visible !important;
+}
+/* Card hover animation */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0, 255, 102, 0.4);
+}
+
+.fade-slide {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-slide.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+  </style>
+</head>  
+<body class="bg-emerald-600 text-white">
+
+<!-- NAVBAR -->  
+<nav class="fixed top-0 left-0 w-full z-50 bg-emerald-600/10 backdrop-blur-md border-b border-white/10">  
+  <div class="max-w-6xl mx-auto flex items-center justify-between py-4 px-6">  
+    <h1 class="text-2xl font-bold glow"></h1>  
+    <ul class="flex space-x-6 text-lg">  
+      <li><a href="#hero" class="glow">Home</a></li>  
+      <li><a href="#about" class="glow">About Me</a></li>  
+      <li><a href="#works" class="glow">My Works</a></li>  
+      <li><a href="#contact" class="glow">Contact</a></li>  
+    </ul>  
+  </div>  
+</nav>
+
+<!-- HERO -->
+    <header id="hero" class="w-full h-[90vh] bg-emerald-700/20 flex items-center justify-center text-center px-4 fade-slide">
+  <div>
+    <div class="hero-image">
+      <img src="https://i.postimg.cc/cHR0Y0Xy/IMG-20251115-WA0006.jpg" alt="Selina Opare">
+    </div>
+    <h1 class="text-4xl md:text-6xl font-bold glow">Selina Opare</h1>
+    <p class="text-lg md:text-2xl mt-3 text-white">Writer • A Poet • Voiceover Artist</p>
+    <p class="mt-4 italic text-white/90">"Welcome to Seyer—the creative home of Selina Opare, a poet, writer, voiceover artist, and spoken word performer.  
+      I create from a place of honesty and emotion, turning the feelings we often tuck away into art that speaks, heals, and resonates"
+    </p>
+  </div>
+</header>
+
+<!-- ABOUT -->  
+<section id="about" class="max-w-6xl mx-auto py-20 px-6 flex flex-col md:flex-row items-center">
+  <div class="md:flex-1">
+    <h2 class="text-3xl font-bold glow mb-6">About Selina</h2>
+    <p class="leading-relaxed">
+      I’m Selina Opare—a poet, writer, voiceover artist, and spoken word performer who transforms raw emotion into art.
+      I weave honesty, faith, and storytelling into pieces that speak to the soul and linger long after they’re heard.
+
+      Through heartfelt performances, commissioned poems, and personal writing projects, I give voice to the moments people often struggle to express.
+      Beyond my creative work, I’m a student at KNUST, studying English, where my love for language and expression continues to grow.
+
+      My art is my way of making meaning out of emotion—and sharing that meaning with others.
+    </p>
+  </div>
+  <div class="about-photo">
+    <img src="https://i.postimg.cc/fTTDt4dx/IMG-20251115-WA0005.jpg" alt="Selina Opare">
+  </div>
+</section>
+
+<!-- MY WORKS -->  
+<section id="works" class="bg-emerald-700/20 py-20 px-6">  
+  <div class="max-w-5xl mx-auto">  
+    <h2 class="text-3xl font-bold glow mb-6">My Works</h2>  
+    <p class="text-white mb-10">My Poems</p>  
+
+    <div class="grid md:grid-cols-3 gap-10">
+
+      <!-- CARD 1 -->  
+      <div id="poemCard" class="card glass w-full p-4 overflow-hidden transition-all duration-500 max-h-64 cursor-pointer relative">  
+        <h3 class="text-2xl mb-2" style="font-family: 'Dancing Script', cursive; color:white;">  
+          A different kind of black (good different)  
+        </h3>  
+        <p id="poemText" class="text-white text-sm leading-relaxed">  
+          ...and I closed my eyes in quiet<br>  
+          My mind hadn't sung like a choir yet<br>  
+          All I saw was black. Pure black. There was nothing it lacked...  
+        </p>  
+        <button id="readMoreBtn" class="mt-3 underline text-white text-sm">Read More</button>  
+
+        <div id="fullPoem" class="hidden text-white text-sm leading-relaxed mt-3">  
+          All I saw was black. Pure black. There was nothing it lacked.    
+          It had its spark, the black kind, while everything perfectly aligned.    
+          It was filled with gloom, it spelt doom like a bullet in a womb.    
+          And a dead man without a tomb ha!    
+          Just pure black.    
+          The kind of black that screamed "hark!"    
+          The kind that barks then cuts you some slack, that black.    
+          The kind that does not go behind your back to show your cracks.    
+          That black I saw.    
+          When I slipped into a peaceful quiet.    
+          I saw it. It saw me. And we smiled.<br><br>  
+          ©️ 2025 ~Seyer<br><br>  
+          <span id="showLessBtn" class="underline text-white text-sm cursor-pointer">Show Less</span>  
+        </div>  
+      </div>
+
+      <!-- CARD 2 -->  
+      <div id="poemCard2" class="card glass w-full p-4 overflow-hidden transition-all duration-500 max-h-64 cursor-pointer relative">  
+        <h3 class="text-2xl mb-2" style="font-family: 'Dancing Script', cursive; color:white;">  
+          Looks that Scream  
+        </h3>  
+        <p id="poemText2" class="text-white text-sm leading-relaxed">  
+          The unspoken words, each time our eyes meet<br>  
+          Linger so much I get on my feet<br>  
+          They cloud my mind, make my heart beat<br>  
+          Make it so hard to keep still in my seat...  
+        </p>  
+        <button id="readMoreBtn2" class="mt-3 underline text-white text-sm">Read More</button>  
+
+        <div id="fullPoem2" class="hidden text-white text-sm leading-relaxed mt-3">  
+          The unspoken words, each time our eyes meet<br>  
+          Linger so much I get on my feet<br>  
+          They cloud my mind, make my heart beat<br>  
+          Make it so hard to keep still in my seat<br><br>  
+          What are we doing?<br>  
+          Are we back to fooling?<br>  
+          Playing, cooling and soothing?<br>  
+          Do we feel the strings our hearts keep pulling?<br><br>  
+          Are we to allow it to play?<br>  
+          Cupid, or are we just made of clay?<br>  
+          I think about all these all night<br>  
+          Maybe we'll know as the days go by<br><br>  
+          ©️ 2025 ~Seyer<br><br>  
+          <span id="showLessBtn2" class="underline text-white text-sm cursor-pointer">Show Less</span>  
+        </div>  
+      </div>
+
+      <!-- CARD 3 -->  
+      <div id="poemCard3" class="card glass w-full p-4 overflow-hidden transition-all duration-500 max-h-64 cursor-pointer relative">  
+        <h3 class="text-2xl mb-2" style="font-family: 'Dancing Script', cursive; color:white;">  
+          Val's day special (for a client)  
+        </h3>  
+
+        <p id="poemText3" class="text-white text-sm leading-relaxed">  
+          There's no one else I'd rather spend my life with,<br>  
+          No one but you, my heart’s perfect gift.<br>  
+          It's a marvelous feeling, you came out of the blue,<br>  
+          The one who lights up my world, it’s always been you...  
+        </p>  
+
+        <button id="readMoreBtn3" class="mt-3 underline text-white text-sm">Read More</button>  
+
+        <div id="fullPoem3" class="hidden text-white text-sm leading-relaxed mt-3">  
+          There's no one else I'd rather spend my life with,<br>  
+          No one but you, my heart’s perfect gift.<br>  
+          It's a marvelous feeling, you came out of the blue,<br>  
+          The one who lights up my world, it’s always been you.<br><br>
+
+          The one I want to come home to each night,<br>  
+          The one I see when I close my eyes tight.<br>  
+          It’s funny how someone can change in a blink,<br>  
+          Becoming the most important, more than you think.<br><br>
+
+          Do you know how consumed I am by your smile?<br>  
+          Your beauty, your essence, they drive me wild.<br>  
+          I smile subconsciously when your name appears,<br>  
+          Hearing your voice melts away all my fears.<br><br>
+
+          It’s a feeling I’ve never had, hard to describe,<br>  
+          A love that feels right, it’s pure and alive.<br>  
+          I asked God for a friend, He gave me my light,<br>  
+          My moonbeam, my joy, everything feels right.<br><br>
+
+          A sister, a confidant, my heart’s true delight,<br>  
+          I can’t wait to hold your hand, walk into the night.<br>  
+          Together we’ll journey, through joy and through fuss,<br>  
+          In this beautiful life, wherever love takes us.<br><br>
+
+          ©️ 2025 ~Seyer<br><br>
+
+          <span id="showLessBtn3" class="underline text-white text-sm cursor-pointer">Show Less</span>  
+        </div>  
+      </div>
+
+<!-- CARD 4 -->
+<div id="poemCard4" class="card glass w-full p-4 overflow-hidden transition-all duration-500 max-h-64 cursor-pointer relative">
+  <h3 class="text-2xl mb-2" style="font-family: 'Dancing Script', cursive; color:white;">
+    Shadows of the Past
+  </h3>
+
+  <p id="poemText4" class="text-white text-sm leading-relaxed">
+    In the mist of all the people,<br>
+    The young and old, the strong and feeble,<br>
+    I find my mind wandering… too far,<br>
+    In some other world, with a road untarred...
+  </p>
+
+  <button id="readMoreBtn4" class="mt-3 underline text-white text-sm">Read More</button>
+
+  <div id="fullPoem4" class="hidden text-white text-sm leading-relaxed mt-3">
+
+    In the mist of all the people<br>
+    The young and old, the strong and feeble<br>
+    I find my mind wandering....too far<br>
+    In some other world, with a road untarred<br><br>
+
+    In the mist of all the eys and heys<br>
+    My mind wallows tentatively to the old days<br>
+    I don't try to fight it, I don't try to stop it<br>
+    I just let it swim back, to those times that hit<br><br>
+
+    Somehow my mind is at ease<br>
+    Even in the dark, it's found peace<br>
+    And I realize it's not always bad<br>
+    To visit the past, it's just hard<br><br>
+
+    To recover, to regain our consciousness<br>
+    To maintain that steeze with ferociousness<br>
+    Sometimes we fail to rush back from that scene<br>
+    That left us crestfallen and at sea<br><br>
+
+    But what can you really do?<br>
+    When you're starstruck, and can't see who?🥲<br><br>
+
+    ©️ 2024 ~Seyer<br><br>
+
+    <span id="showLessBtn4" class="underline text-white text-sm cursor-pointer">Show Less</span>
+  </div>
+</div>
+
+<!-- CARD 5 -->
+      <div id="poemCard5" class="card glass w-full p-4 overflow-visible transition-all duration-500 cursor-pointer relative">
+        <h3 class="text-2xl mb-2" style="font-family: 'Dancing Script', cursive; color:white;">
+          You Broke Me! (Duet)
+        </h3>
+
+        <p id="poemText5" class="text-white text-sm leading-relaxed">
+          <strong>(Lady)</strong><br>
+          I deserve peace,not pieces<br>
+          I deserve the world's best, not to be treated like a pest<br>
+          I deserve all those golden bars, talk of talent that goes far<br>
+          I deserve all that, not some lousy indifferent pat<br>
+          Like the last one you gave on my shoulder<br>
+          When you said goodbye and left me , a loner...
+          </p>
+          
+        <button id="readMoreBtn5" class="mt-3 underline text-white text-sm">Read More</button>
+
+        <div id="fullPoem5" class="hidden text-white text-sm leading-relaxed mt-3">
+
+          <strong>(Guy)</strong><br>
+          I'm sorry. I know I screwed our story.<br>
+          But don't worry..<br><br>
+
+          <strong>(Lady)</strong><br>
+          I'm done. I'm done being the temporary place<br>
+          Where you pass by for fun and leave without a trace<br>
+          I'm not that butterfly that flutters by at the click of your fingers<br>
+          You cannot be the CNN that I turn on just to be hit with a news that lingers<br>
+          I am done with being the the car that you pick up and drop at the junkyard when a Porsche springs up<br><br>
+
+          <strong>(Guy)</strong><br>
+          I'm sorry<br><br>
+
+          <strong>(Lady)</strong><br>
+          You think a gentle touch, a soft whisper can erase<br>
+          The scars you left, the love you betrayed?<br>
+          Oh you think a sweet smile and a charming gaze can undo<br>
+          The damage done, the heart you broke in two?<br><br>
+
+          <strong>(Guy)</strong><br>
+          I'm so..<br><br>
+
+          <strong>(Lady)</strong><br>
+          Oh cry me a river, sail me to the shore<br>
+          Where apologises are cheap, and love is a bore<br>
+          You know when you left, I was forlorn<br>
+          And at that moment, I understood the world no more<br><br>
+
+          If you're looking for that girl, with the curl<br>
+          Go ask Ed, she ran<br>
+          You cannot Doja Cats<br>
+          Because you messed up, big time Kevin, take Heart<br><br>
+
+          ©️ 2024 ~Seyer<br><br>
+
+          <span id="showLessBtn5" class="underline text-white text-sm cursor-pointer">Show Less</span>
+        </div>
+      </div>
+  
+  <!-- CARD 6 -->
+<div id="poemCard6" class="card glass w-full p-4 overflow-hidden transition-all duration-500 max-h-64 cursor-pointer relative">
+  <h3 class="text-2xl mb-2" style="font-family: 'Dancing Script', cursive; color:white;">
+    Sigh
+  </h3>
+
+  <p id="poemText6" class="text-white text-sm leading-relaxed">
+    Waking up from our slumbers to find you're gone, chills us to the core<br>
+    Who would have thought? With your strength and poise, you'd cross that river's shore...
+  </p>
+
+  <button id="readMoreBtn6" class="mt-3 underline text-white text-sm">Read More</button>
+
+  <div id="fullPoem6" class="hidden text-white text-sm leading-relaxed mt-3">
+    Now, your empty chair, brings a silent sigh<br>
+    Could you not have lingered a while?<br>
+    You weren't just a worker in the office halls<br>
+    You were a voice for those who had no voice at all<br>
+    You fought for fairness, for a decent wage<br>
+    For a safe workplace, for a life on the page<br>
+    You'd listen to people's stories, with a patient ear<br>
+    And strive for what was right, without a single fear<br>
+    Your diligence never went unseen<br>
+    And we silently hoped that it would appear on screen<br>
+    You always knew the right words to say<br>
+    In times of need, your Solomon side came to play<br>
+    You'd see the silent struggles and burdens others bear<br>
+    And offer help to them, with a love so rare<br>
+    We're rendered speechless! Are you really gone? Our friend so dear?<br>
+    All we ever say, we truly wish you could hear<br>
+    Now your laughter is gone, your presence we miss<br>
+    But your imprint lives on, a gentle kiss<br>
+    We comfort ourselves that you've found a safe haven<br>
+    You're at a better place, with our Father in Heaven<br>
+    So let's wipe our tears as we sing his grace<br>
+    And remember the man, with a smile on our face<br>
+    We wish you a goodnight, Francis<br>
+    Sleep tight!<br><br>
+
+    ©️ 2025 ~Seyer<br><br>
+    <span id="showLessBtn6" class="underline text-white text-sm cursor-pointer">Show Less</span>
+  </div>
+</div>
+
+<!-- CARD 7 -->
+<div id="poemCard7" class="card glass w-full p-4 overflow-hidden transition-all duration-500 max-h-64 cursor-pointer relative">
+  <h3 class="text-2xl mb-2" style="font-family: 'Dancing Script', cursive; color:white;">
+    When I saw you again!
+  </h3>
+
+  <p id="poemText7" class="text-white text-sm leading-relaxed">
+    I met you once five years ago<br>
+    like a school, you had my eyes enrolled<br>
+    you held a stare like a seasoned pro<br>
+    and my heart - two things at a goal...
+  </p>
+
+  <button id="readMoreBtn7" class="mt-3 underline text-white text-sm">Read More</button>
+
+  <div id="fullPoem7" class="hidden text-white text-sm leading-relaxed mt-3">
+    no names exchanged, no stories shared<br>
+    just quiet knowing, just hearts aware<br>
+    I called it a poisonous affair<br>
+    one our eyes brazenly declared<br><br>
+
+    until they didn’t...<br>
+    time made it easier by far<br>
+    except it forgot to lift the memories over the bar<br>
+    so unconventionally, I found myself back there<br>
+    smiling at the echoes that came bare<br><br>
+
+    that was five years ago<br>
+    you became a story I used to know<br><br>
+
+    then I saw you again<br>
+    older, taller, a familiar frame<br>
+    and so was I ... a lovelier dame<br>
+    though the years had brushed us both<br>
+    that glance, that pause ... it still spoke<br><br>
+
+    there I stood in my spot, and you in yours<br>
+    our hearts recalling what words ignored<br>
+    feelings of the past returning in cuffs<br>
+    slipping softly into the present, warmly enough<br><br>
+
+    though we’ve changed and time has passed<br>
+    some moments , like glances , are meant to last.<br><br>
+
+    ©️ ~truly, She.<br><br>
+    <span id="showLessBtn7" class="underline text-white text-sm cursor-pointer">Show Less</span>
+  </div>
+</div>
+
+<!-- CARD 8 -->
+<div id="poemCard8" class="card glass w-full p-4 overflow-hidden transition-all duration-500 max-h-64 cursor-pointer relative">
+  <h3 class="text-2xl mb-2" style="font-family: 'Dancing Script', cursive; color:white;">
+    Hello Childhood
+  </h3>
+
+  <p id="poemText8" class="text-white text-sm leading-relaxed">
+    Hello Childhood,<br>
+    It's me.<br>
+    I thought I'd never see you again.<br>
+    But here you are - watching as I crawl in pain... 
+  </p>
+
+  <button id="readMoreBtn8" class="mt-3 underline text-white text-sm">Read More</button>
+
+  <div id="fullPoem8" class="hidden text-white text-sm leading-relaxed mt-3 scrollable">
+    It's insane, the same way I escaped, I return to be saved by you dear Childhood.<br>
+    Tell you what, it was all in vain, the journey I took, there was no gain. No rain. Only stains.<br>
+    So I'm back for my chains because my brain says it plain it can't sustain.<br>
+    And I can't complain so I live restrained.<br>
+    I'm back -<br>
+    Because there, I did explain but what they obtained left me in pain so if I maintain I'm sure I'll get detained.<br>
+    I'm so drained...<br>
+    So I slip back into your skin, the one that never fit. The one stitched tight with silence.<br>
+    Tongue heavy, heart locked<br>
+    Mind hazy, head cocked<br>
+    I remember your lessons;<br>
+    1. Don't speak — You'll look like a freak, just freeze and enjoy the breeze.<br>
+    2. Don't fight — Be out of sight. Don't shine too bright. Just enjoy your night.<br>
+    3. Let them step over you, no need to feel blue. Pretend you've no clue. Pretend you're stone, bold, cold. Pretend you feel nothing...by laughing.<br>
+    And I obey again because the disdain I've been trained with still remains.<br>
+    I obey again, because survival there is smaller than breathing.<br>
+    It's similar to bleeding, Thinner than a whisper, Better than a twister.<br>
+    Hello Childhood,<br>
+    I hate how familiar you are.<br>
+    I hate that I still know your rules by heart.<br>
+    But there in that place<br>
+    You're the only version of me that has space.<br><br>
+
+    ©️ 2025 ~Seyer<br><br>
+    <span id="showLessBtn8" class="underline text-white text-sm cursor-pointer">Show Less</span>
+  </div>
+</div>
+
+<!-- CARD 9 -->
+<div id="poemCard9" class="card glass w-full p-4 overflow-hidden transition-all duration-500 max-h-64 cursor-pointer relative">
+  <h3 class="text-2xl mb-2" style="font-family: 'Dancing Script', cursive; color:white;">
+    A need so needful
+  </h3>
+
+  <p id="poemText9" class="text-white text-sm leading-relaxed">
+    We Need The Man<br>
+    Truth be told, we cannot can<br>
+    For all of us to land...
+  </p>
+
+  <button id="readMoreBtn9" class="mt-3 underline text-white text-sm">Read More</button>
+
+  <div id="fullPoem9" class="hidden text-white text-sm leading-relaxed mt-3 scrollable">
+    There are some things we must ban<br>
+    Just take a look at the sun<br>
+    Look at how He sent us His son<br>
+    Who can compare to this Man?<br>
+    No one. No, none.<br>
+    Sometimes I observe the world and gasp<br>
+    I just get chills, my hands get clasped<br>
+    Even at our worst He does His best<br>
+    As sinful as we are, He gives us rest...<br><br>
+    What could we ever give to Him? <br>
+If not His songs, praises and Hymns?<br>
+
+
+We Need The Man<br>
+Let's admit it, He's the one<br>
+Our ever loyal and loving friend<br>
+The only true friend who doesn't pretend<br>
+What is the world without His love?<br>
+What would we be? What would we have?<br>
+Tell me if not for His grace<br>
+The grace that sees us through our race<br>
+And helps us to set our pace<br>
+And reveals to us His handsome face? <br>
+Scream it, where would we be?<br>
+Would the boss still be the boss?<br>
+Would we sell and face no loss?<br>
+Could we still carry our own cross?<br>
+Would our laid-out plans ever sauce?<br>
+Tell me, wouldn't we be on the knee?<br>
+Pleading and screaming to break free????<br>
+
+
+We Need The Lamb<br>
+Trust me,He does no harm<br>
+His plans work out like charm<br>
+He even has the King's heart in His palm<br>
+Would you rather not tend to Him and be calm?<br>
+Do you prefer to have sin in your arm?<br>
+
+
+We Need The King,just sit and think<br>
+You know He's got all the links<br>
+And can make your life brighter than pink<br>
+Oh yes! It is to Him we sing<br>
+Our merciful and loving father<br>
+Our saviour who sends our troubles farther<br>
+Come to Him you who think your life is harder<br>
+And you'll be amazed how He'll work it out like a mother<br>
+
+
+We Need Him,<br>
+The Eternal<br>
+Let's choose Him<br>
+And flee infernal<br>
+<br><br>
+
+    ©️ 2023 ~Seyer<br><br>
+    <span id="showLessBtn9" class="underline text-white text-sm cursor-pointer">Show Less</span>
+  </div>
+</div>
+
+<!-- CARD 10 -->
+<div id="poemCard10" class="card glass w-full p-4 overflow-hidden transition-all duration-500 max-h-64 cursor-pointer relative">
+  <h3 class="text-2xl mb-2" style="font-family: 'Dancing Script', cursive; color:white;">
+    Walking On Thin Ice
+  </h3>
+
+  <p id="poemText10" class="text-white text-sm leading-relaxed">
+    Darkness.....<br>
+    Darkness....<br>
+    A shift on the bed<br>
+    Eyes are shut...
+  </p>
+
+  <button id="readMoreBtn10" class="mt-3 underline text-white text-sm">Read More</button>
+
+  <div id="fullPoem10" class="hidden text-white text-sm leading-relaxed mt-3 scrollable">
+    I'm wandering...<br>
+    In dream land <br>
+    I see him...<br>
+    I smile ...<br>
+    I'm ecstatic ...<br>
+    He is too....<br>
+    I'm smiling...too much<br>
+His gaze is bold, with a dare in its stare<br>
+It leaves me trembling, with a heart that's willing to dare<br>
+He takes my hand in his...<br>
+Caresses it gently...<br>
+Looks at me in the eye....<br>
+I'm smiling.... Enchanted...<br>
+We take a step together.....<br>
+I turn again...my Bible falls...<br>
+My eyes flutter open.....<br>
+I wake up....<br>
+It's a dream....<br>
+My heart is beating <br>
+I feel the heat, it's a rhythmic greeting <br>
+I shut my eyes.... can't be happening <br>
+In disbelief, my world is collapsing <br>
+I see what it's doing, my heart <br>
+And I hate to love it , it's tearing me apart <br>
+I want to stop it, these irregular heartbeats<br>
+That I only feel when he's around me<br>
+But how can I when I can't seem to erase<br> 
+The feeling of his gentle touch, his warm embrace<br>
+How can I let go, when all I see is him, the moment I close my eyes <br>
+How can I be free when his heart is where my heart lies<br>
+I know what I'm doing<br>
+I know it, I'm fooling <br>
+But I've never been more happy to be a fool<br>
+And loving him is a mistake I'd repeat as a rule <br>
+I'm walking on thin ice <br>
+My heart , a fragile device<br>
+
+    <br><br>
+
+    ©️ 2025 ~Seyer<br><br>
+    <span id="showLessBtn10" class="underline text-white text-sm cursor-pointer">Show Less</span>
+  </div>
+</div>
+</script>
+
+</section>
+
+<!-- AWARD (unchanged) -->  
+<section class="bg-emerald-700/20 py-20 px-6">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold glow mb-8">Award</h2>
+
+    <div class="award-image w-48 h-64 mx-auto mb-4">
+      <img src="https://i.postimg.cc/8CLqXwWP/IMG-20251115-WA0007.jpg" alt="Poet / Spoken Word Artist of the Year">
+    </div>
+
+    <br>2024<br>
+
+    <p class="text-white text-lg font-semibold">Poet / Spoken Word Artist of the Year</p>
+  </div>
+  <script>
+// fade-slide animation on page load
+window.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.fade-slide');
+  cards.forEach((card, index) => {
+    setTimeout(() => {
+      card.classList.add('show');
+    }, index * 150); // stagger animation: 150ms between cards
+  });
+});
+</script>
+</section>
+
+<!-- CONTACT -->  
+<section id="contact" class="max-w-4xl mx-auto py-20 px-6">  
+  <h2 class="text-3xl font-bold glow mb-6">Get In Touch</h2>  
+  <p>Whether it’s a heartfelt poem for someone special or a writing project you need help with, I’d love to bring your ideas to life. Drop me a message, and we’ll get started.</p>  
+
+  <form id="contactForm" class="mt-6 flex flex-col gap-4">  
+    <input type="text" id="name" placeholder="Your Name" required class="p-3 rounded border border-white bg-emerald-600/20 text-white focus:outline-none focus:ring-2 focus:ring-emerald-400">  
+    <input type="email" id="email" placeholder="Your Email (optional)" class="p-3 rounded border border-white bg-emerald-600/20 text-white focus:outline-none focus:ring-2 focus:ring-emerald-400">  
+    <textarea id="message" placeholder="Your Message" required rows="5" class="p-3 rounded border border-white bg-emerald-600/20 text-white focus:outline-none focus:ring-2 focus:ring-emerald-400"></textarea>  
+    <button type="submit" class="px-6 py-3 bg-emerald-700 text-white font-semibold rounded hover:bg-emerald-800 transition">Send via WhatsApp</button>  
+  </form>  
+
+  <p class="mt-2 text-white/80 text-sm">I usually respond within 24 hours. Can’t wait to hear your ideas!</p>  
+
+  <div class="flex space-x-4 mt-6 text-2xl">  
+    <a href="tel:+233547670401" class="social-icon text-white"><i class="fas fa-phone"></i></a>  
+    <a href="https://www.instagram.com/si.e.lle" target="_blank" class="social-icon text-white"><i class="fab fa-instagram"></i></a>  
+    <a href="https://www.snapchat.com/add/sielle111" target="_blank" class="social-icon text-white"><i class="fab fa-snapchat"></i></a>  
+    <a href="https://www.tiktok.com/@si_elle1" target="_blank" class="social-icon text-white"><i class="fab fa-tiktok"></i></a>  
+    <a href="https://wa.me/+233547670401" target="_blank" class="social-icon text-white"><i class="fab fa-whatsapp"></i></a>  
+  </div>  
+
+  <p class="mt-4 text-white/80 italic text-sm">If you love my works... give me a folloooow</p><br>
+  
+  
+  <!-- FOOTER -->
+<footer class="bottom-0 left-0 w-full z-50 bg-emerald-600/10 backdrop-blur-md border-t border-white/10 py-4 text-white text-center">
+  <p>© 2025 Seyer</p>
+</footer>
+
+  <script>
+const cardList = [
+  {card:"poemCard", text:"poemText", full:"fullPoem", more:"readMoreBtn", less:"showLessBtn"},
+  {card:"poemCard2", text:"poemText2", full:"fullPoem2", more:"readMoreBtn2", less:"showLessBtn2"},
+  {card:"poemCard3", text:"poemText3", full:"fullPoem3", more:"readMoreBtn3", less:"showLessBtn3"},
+  {card:"poemCard4", text:"poemText4", full:"fullPoem4", more:"readMoreBtn4", less:"showLessBtn4"},
+  {card:"poemCard5", text:"poemText5", full:"fullPoem5", more:"readMoreBtn5", less:"showLessBtn5"},
+  {card:"poemCard6", text:"poemText6", full:"fullPoem6", more:"readMoreBtn6", less:"showLessBtn6"},
+  {card:"poemCard7", text:"poemText7", full:"fullPoem7", more:"readMoreBtn7", less:"showLessBtn7"},
+  {card:"poemCard8", text:"poemText8", full:"fullPoem8", more:"readMoreBtn8", less:"showLessBtn8"},
+  {card:"poemCard9", text:"poemText9", full:"fullPoem9", more:"readMoreBtn9", less:"showLessBtn9"},
+  {card:"poemCard10", text:"poemText10", full:"fullPoem10", more:"readMoreBtn10", less:"showLessBtn10"}
+];
+
+let openCard = null;
+
+function collapse(c) {
+  const card = document.getElementById(c.card);
+  const text = document.getElementById(c.text);
+  const full = document.getElementById(c.full);
+  const more = document.getElementById(c.more);
+
+  full.classList.add("hidden");
+  text.classList.remove("hidden");
+  card.classList.add("max-h-64");
+  card.classList.remove("max-h-full");
+  more.classList.remove("hidden");
+}
+
+cardList.forEach(c => {
+  const card = document.getElementById(c.card);
+  const text = document.getElementById(c.text);
+  const full = document.getElementById(c.full);
+  const more = document.getElementById(c.more);
+  const less = document.getElementById(c.less);
+
+  more.addEventListener("click", e => {
+    e.stopPropagation();
+
+    // collapse previously opened card
+    if (openCard && openCard !== c) collapse(openCard);
+
+    // expand this card
+    full.classList.remove("hidden");
+    text.classList.add("hidden");
+    card.classList.remove("max-h-64");
+    card.classList.add("max-h-full");
+    more.classList.add("hidden");
+
+    openCard = c;
+  });
+
+  less.addEventListener("click", e => {
+    e.stopPropagation();
+    collapse(c);
+    if (openCard === c) openCard = null;
+  });
+});
+
+// collapse when clicking outside
+document.addEventListener("click", e => {
+  if (!openCard) return;
+  const cardEl = document.getElementById(openCard.card);
+  if (!cardEl.contains(e.target)) {
+    collapse(openCard);
+    openCard = null;
+  }
+});
+</script>
+</body>  
+</html>
